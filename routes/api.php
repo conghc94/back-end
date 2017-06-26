@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/order','Api\OrderController@postOder')->name('order.post');
+
 Route::get('/drinksfoods','Api\DrinkfoodController@getDrinksfoods')->name('drinksfoods.get');
 Route::post('/drinkfood','Api\DrinkfoodController@postDrinkfood')->name('drinkfood.post');
 Route::put('/drinkfood/{id}','Api\DrinkfoodController@putDrinkfood')->name('drinkfood.put');
