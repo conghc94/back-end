@@ -1,0 +1,8 @@
+
+/vendor
+/.idea
+
+
+.env
+vendor/*
+vendor
