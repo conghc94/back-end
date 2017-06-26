@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/drinksfoods','Api\DrinkfoodController@getDrinksfoods')->name('drinksfoods.get');
 Route::post('/drinkfood','Api\DrinkfoodController@postDrinkfood')->name('drinkfood.post');
-//Route::put('/drinkfood/{id}','Api\DrinkfoodController@putDrinkfood')->name('drinkfood.put');
+Route::put('/drinkfood/{id}','Api\DrinkfoodController@putDrinkfood')->name('drinkfood.put');
+Route::delete('/drinkfood/{id}','Api\DrinkfoodController@deleteDrinkfood')->name('drinkfood.delete');
 
 Route::post('/customer','Api\CustomerController@postCustomer')->name('customer.post');
 Route::get('/customers','Api\CustomerController@getCustomers')->name('customers.get');
